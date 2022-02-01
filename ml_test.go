@@ -2,18 +2,15 @@ package ml
 
 import (
 	"testing"
-	"time"
+
+	"ml.test.com/leakcheck"
 
 	"cloud.google.com/go/compute/metadata"
-	"go.uber.org/goleak"
-
 )
 
 func TestML(t *testing.T) {
-	defer func() {
-		time.Sleep(time.Second * 5)
-		goleak.VerifyNone(t)
-	}()
+
+	defer leakcheck.Check(t)
 
 	if metadata.OnGCE() {
 		t.Logf("on gce")
