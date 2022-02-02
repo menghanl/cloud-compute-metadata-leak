@@ -30,6 +30,24 @@ jobs:
 
           - type: tests-5
             goversion: 1.17
+            
+          - type: tests
+            goversion: 1.17
+
+          - type: tests-1
+            goversion: 1.17
+
+          - type: tests-2
+            goversion: 1.17
+
+          - type: tests-3
+            goversion: 1.17
+
+          - type: tests-4
+            goversion: 1.17
+
+          - type: tests-5
+            goversion: 1.17
     steps:
     - uses: actions/checkout@v2
 
