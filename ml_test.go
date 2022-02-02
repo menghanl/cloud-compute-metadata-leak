@@ -6,8 +6,6 @@ import (
 	"ml.test.com/leakcheck"
 
 	"cloud.google.com/go/compute/metadata"
-
-	_ "google.golang.org/grpc"
 )
 
 func TestML(t *testing.T) {
