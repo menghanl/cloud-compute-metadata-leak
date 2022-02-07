@@ -86,6 +86,7 @@ func check(efer Errorfer, timeout time.Duration) {
 			return
 		}
 		time.Sleep(50 * time.Millisecond)
+		runtime.GC()
 	}
 	for _, g := range leaked {
 		efer.Errorf("Leaked goroutine: %v", g)
