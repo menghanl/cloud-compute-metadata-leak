@@ -3,7 +3,7 @@ package ml
 import (
 	"testing"
 
-	"ml.test.com/leakcheck"
+	"github.com/codyoss/cloud-compute-metadata-leak/leakcheck"
 
 	"cloud.google.com/go/compute/metadata"
 )
